@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #151515;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'Roboto', "Hiragino Kaku Gothic ProN",  sans-serif;
+}
+body::after {
+  content: '';
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #151515;
+  z-index: 11;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+section {
+  position: sticky;
+  top: 60px;
+}
+.static {
+  position: static;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #151515;
+  z-index: 11;
+}
+.logo {
+  margin: 0;
+  padding-top: 15px;
+}
+
+/* side */
+.side-button {
+  background-color: rgba(0, 0, 0, 1);
+  position: fixed;
+  height: 100%;
+  width: 60px;
+  top: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.menu-button {
+  margin: -30px 0 0;
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+}
+.menu-button i {
+  position: absolute;
+  top: 30px;
+  left: 17px;
+  width: 26px;
+  height: 2px;
+  background-color: #fff;
+}
+.menu-button::before,
+.menu-button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 17px;
+  width: 26px;
+  height: 2px;
+  background-color: #fff;
+}
+.menu-button::before {
+  top: 20px;
+}
+.menu-button::after {
+  top: 40px;
+}
+.sidebar {
+  background-color: rgba(45, 45, 45, 0.6);
+  width: 350px;
+  height: 100%;
+  top: 0;
+  left: -350px;
+  position: fixed;
+  z-index: 10;
+}
+.sidemenu {
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+.side-item {
+  margin: 0 0 20px;
+  list-style: none;
+}
+
+/* footer */
+.footer {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #151515;
+  z-index: 10;
+}
+
+
+.heading {
+  margin: 0 0 15px;
+  color: inherit;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  padding: 30px 80px 0;
+  position: sticky;
+  top: 60px;
+}
+
+/* top */
+.top {
+  padding: 60px;
+  background: url('../images/img07.jpg') no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+}
+.top .content {
+  padding: 120px 0;
+}
+.site-title {
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  font-size: 7.6rem;
+}
+.site-title-sub {
+  font-size: 2.2rem;
+}
+
+/* about */
+.about {
+  padding: 0 120px;
+  background: url('../images/img08.jpg') no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+  color: #333;
+}
+.about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 30px 0;
+}
+.about-box {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/* skills */
+.skills {
+  background: url('../images/img09.jpg') no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 60px;
+}
+.skill-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.skill-box {
+  margin: 20px;
+  width: 30%;
+  background-color: #fff;
+  color: #000;
+  box-shadow:0px 0px 4px 2px #615c5e;
+}
+.skill-heading {
+  margin: 15px 0 25px;
+  font-size: 2.2rem;
+}
+.skill-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1.5em;
+  font-size: 1.2em;
+}
+.rate{
+position: relative;
+display: inline-block;
+text-align: initial;
+}
+.rate:before,
+.rate:after{
+content: "★★★★★";
+}
+.rate:before{
+color: #ccc;
+}
+.rate:after{
+position: absolute;
+left:0;
+top:0;
+color: #FFA500;
+overflow: hidden;
+}
+.rate.rate3:after{
+width: 3em;
+}
+.rate.rate4:after{
+width: 4em;
+}
+.rate.rate5:after{
+width: 5em;
+}
+
+/* works */
+.works {
+  background-color: #303030;
+  height: 100vh;
+  font-size: 0;
+  padding: 0 60px;
+}
+.work-wrapper {
+  width: 990px;
+  margin: 50px auto;
+}
+.work-box {
+  position: relative;
+  width: 330px;
+  float: left;
+}
+.work-img {
+  width: 330px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+a.expand {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  font-size: 2rem;
+}
+.contact {
+  background: url('../images/img06.jpg') no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+}
