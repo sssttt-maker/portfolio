@@ -1,19 +1,29 @@
 $(function() {
   var duration = 300;
+  var breakPoint = 768;
+      windowWidth = $(window).width();
+      windowHeight = $(window).height();
   // サイドバー
-  var $sideBar = $('.sidebar')
-  $('.side').hover(
-    function(){
-      $sideBar.stop(false).animate({ left: '60px' }, duration);
-    },
-    function() {
-      $sideBar.stop(false).animate({ left: '-350px' }, duration);
+  var $sideBar = $('.sidebar');
+  if (windowWidth > breakPoint) {
+    $('.side').hover(
+      function(){
+        $sideBar.addClass('open');
+      },
+      function() {
+        $sideBar.removeClass('open');
+      }
+    );
+  } else {
+    $('.menu-button').click(function() {
+      $sideBar.toggleClass('open');
     });
+  };
 
   // スムーススクロール
-  var windowHeight = $(window).height();
   $(window).resize(function() {
     windowHeight = $(window).height();
+    windowWidth = $(window).width();
   });
   $('.side-item').each(function(i) {
     $(this).click(function() {
@@ -22,12 +32,13 @@ $(function() {
   });
 
   // worksホバー
-  $('.work-box').each(function() {
-    $(this).on('mouseover', function() {
-      $(this).find('.overlay').stop(true).animate({ opacity: 1 }, duration);
-    }).on('mouseout', function() {
-      $(this).find('.overlay').stop(true).animate({ opacity: 0 }, duration);
-    })
-  })
-
+  // $('.work-box').each(function() {
+  //   if(windowWidth > breakPoint) {
+  //     $(this).on('mouseover', function() {
+  //       $(this).find('.overlay').stop(true).animate({ opacity: 1 }, duration);
+  //     }).on('mouseout', function() {
+  //       $(this).find('.overlay').stop(true).animate({ opacity: 0 }, duration);
+  //     })
+  //   }
+  // })
 });

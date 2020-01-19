@@ -13,15 +13,16 @@ body {
   font-size: 1.4rem;
   font-family: 'Roboto', "Hiragino Kaku Gothic ProN",  sans-serif;
 }
-body::after {
-  content: '';
-  display: block;
+.under {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 60px;
   background-color: #151515;
   z-index: 11;
+}
+.under-text {
+  margin: 21px;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -33,6 +34,7 @@ a {
 section {
   position: sticky;
   top: 60px;
+  height: 100vh;
 }
 .static {
   position: static;
@@ -64,7 +66,7 @@ section {
   width: 60px;
   top: 0;
   cursor: pointer;
-  z-index: 10;
+  z-index: 11;
 }
 .menu-button {
   margin: -30px 0 0;
@@ -105,12 +107,16 @@ section {
   left: -350px;
   position: fixed;
   z-index: 10;
+  transition: 0.3s
+}
+.sidebar.open {
+  left: 0;
 }
 .sidemenu {
   margin: 0;
   padding: 0;
   top: 50%;
-  left: 50%;
+  left: 60%;
   position: absolute;
   font-size: 2rem;
   letter-spacing: 2px;
@@ -148,7 +154,7 @@ section {
   padding: 60px;
   background: url('../images/img07.jpg') no-repeat fixed;
   background-size: cover;
-  height: 100vh;
+  background-position: center;
 }
 .top .content {
   padding: 120px 0;
@@ -167,14 +173,13 @@ section {
   padding: 0 120px;
   background: url('../images/img08.jpg') no-repeat fixed;
   background-size: cover;
-  height: 100vh;
   color: #333;
 }
 .about-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 .about-box {
   font-weight: bold;
@@ -184,7 +189,6 @@ section {
 .skills {
   background: url('../images/img09.jpg') no-repeat fixed;
   background-size: cover;
-  height: 100vh;
   padding: 0 60px;
 }
 .skill-wrapper {
@@ -241,39 +245,197 @@ width: 5em;
 /* works */
 .works {
   background-color: #303030;
-  height: 100vh;
   font-size: 0;
   padding: 0 60px;
 }
 .work-wrapper {
-  width: 990px;
-  margin: 50px auto;
+  display: table;
+  table-layout: fixed;
+  margin: 70px auto 50px;
 }
 .work-box {
   position: relative;
-  width: 330px;
-  float: left;
+  display: table-cell;
 }
 .work-img {
-  width: 330px;
+  width: 100%;
 }
 .overlay {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
+  transition: 0.3s;
+}
+.overlay:hover {
+  opacity: 1;
 }
 a.expand {
   position: absolute;
-  top: 45%;
+  top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   font-size: 2rem;
 }
+.work-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  margin: 0;
+}
+.work-description {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  font-size: 12px;
+}
 .contact {
-  background: url('../images/img06.jpg') no-repeat fixed;
+  background: url('../images/img10.jpg') no-repeat fixed;
   background-size: cover;
-  height: 100vh;
+  padding: 60px;
+}
+.contact-wrapper {
+  font-size: 3rem;
+  margin-top: 60px;
+}
+.contact-mail,
+.contact-link {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0;
+  min-width: 40%;
+}
+.contact-mail {
+  background-color: #a93e33;
+}
+.contact-link {
+  background-color: #55acee;
+}
+/* .contact-form {
+  width: 60%;
+  margin: 50px auto 0;
+}
+.contact-form input[type=text],
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.contact-form textarea {
+  height: 150px;
+}
+.contact-form input[type=submit] {
+  display: block;
+  width: 200px;
+  margin: 40px auto 0;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.contact-form input[type=submit]:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.contact-form input[type=text]:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5) inset;
+} */
+.social-wrapper {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.social-btn {
+  display: block;
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  section {
+    height: auto;
+    min-height: 100vh;
+    position: initial;
+  }
+  .heading {
+    position: initial;
+    padding: 0;
+    padding-top: 30px;
+    font-size: 3rem;
+  }
+  .side-button {
+    height: 60px;
+  }
+  .menu-button {
+    margin: 0;
+    top: 0;
+  }
+  .sidebar {
+    width: 50%;
+  }
+  .sidemenu {
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%) translateX(0); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-50%) translateX(0);
+  }
+  .footer {
+    width: 0;
+    height: 0;
+  }
+  .top {
+    height: 100vh;
+    padding: 60px 30px;
+  }
+  .about {
+    padding: 60px 30px;
+  }
+  .skills {
+    padding: 60px 30px;
+  }
+  .skill-wrapper {
+    display: block;
+  }
+  .skill-box {
+    width: auto;
+  }
+  .skill-heading {
+    padding-top: 20px;
+  }
+  .works {
+    padding: 60px 30px;
+  }
+  .work-wrapper {
+    display: block;
+    table-layout: auto;
+  }
+  .work-box {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .overlay {
+    opacity: 1;
+  }
+  .work-description {
+    font-size: 10px;
+  }
+  .contact-form {
+    width: 100%;
+  }
 }
