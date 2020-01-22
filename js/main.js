@@ -27,7 +27,12 @@ $(function() {
   });
   $('.side-item').each(function(i) {
     $(this).click(function() {
-      $("html,body").stop(true).animate({scrollTop: windowHeight * i}, 1000);
+      if (windowWidth > breakPoint) {
+        $("html,body").stop(true).animate({scrollTop: windowHeight * i}, 1000);
+      } else {
+        var targetTop = $($(this).find("a").attr("href")).offset().top
+        $("html,body").stop(true).animate({scrollTop: targetTop}, 1000);
+      }
     });
   });
 
