@@ -378,6 +378,7 @@ a.expand {
     padding: 0;
     padding-top: 30px;
     font-size: 3rem;
+    opacity: 0;
   }
   .side-button {
     height: 60px;
@@ -437,5 +438,17 @@ a.expand {
   }
   .contact-form {
     width: 100%;
+  }
+
+  .elem {
+    opacity: 0;
+    transform: translateY(20px);
+    -webkit-ransform: translateY(20px);
+    transition: 1s;
+  }
+  .isAnimate {
+    transform: translateY(0);
+    -webkit-ransform: translateY(0);
+    opacity: 1;
   }
 }

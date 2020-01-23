@@ -36,6 +36,47 @@ $(function() {
     });
   });
 
+  $(window).scroll(function() {
+    if (windowWidth < breakPoint) {
+      var scrollPos = $(window).scrollTop();
+
+      $(".heading").each(function() {
+        var headingOffset = $(this).offset().top;
+        if(scrollPos > headingOffset - windowHeight ) {
+          $(this).css('opacity', 1).textillate({
+            in: {
+              effect: 'fadeInLeftBig'
+            }
+          })
+        }
+      })
+      $(".elem").each(function() {
+        var elemOffset = $(this).offset().top;
+        if(scrollPos > elemOffset - windowHeight + (windowHeight / 3) ) {
+          $(this).addClass('isAnimate');
+        }
+      });
+    }
+  });
+  $('.randomFadeIn').textillate({
+  	minDisplayTime: 3000,	// アニメーションの間隔時間
+  	initialDelay: 600,	// アニメーション開始までの遅延時間
+  	autoStart: true,	// アニメーションの自動スタート
+
+  	in: {
+  		effect: 'fadeInDown',	// エフェクトの指定
+  		delayScale: 1.5,	// 遅延時間の指数
+  		delay: 100,	// 文字ごとの遅延時間
+  		shuffle: true, // 文字のランダム表示
+  	},
+  });
+  $(".textillate").textillate({
+    in: {
+      effect: 'bounceInDown',
+      delayScale: 1.5,
+      delay: 100
+    }
+  })
   // worksホバー
   // $('.work-box').each(function() {
   //   if(windowWidth > breakPoint) {
