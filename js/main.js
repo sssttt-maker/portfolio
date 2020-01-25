@@ -5,6 +5,9 @@ $(function() {
       windowHeight = $(window).height();
   // サイドバー
   var $sideBar = $('.sidebar');
+
+  endLoading();
+
   if (windowWidth > breakPoint) {
     $('.side').hover(
       function(){
@@ -60,7 +63,7 @@ $(function() {
   });
   $('.randomFadeIn').textillate({
   	minDisplayTime: 3000,	// アニメーションの間隔時間
-  	initialDelay: 600,	// アニメーション開始までの遅延時間
+  	initialDelay: 1600,	// アニメーション開始までの遅延時間
   	autoStart: true,	// アニメーションの自動スタート
 
   	in: {
@@ -71,6 +74,7 @@ $(function() {
   	},
   });
   $(".textillate").textillate({
+    initialDelay: 1000,
     in: {
       effect: 'bounceInDown',
       delayScale: 1.5,
@@ -87,4 +91,11 @@ $(function() {
   //     })
   //   }
   // })
+
+  function endLoading () {
+    $('.loading img').fadeOut(1000, function() {
+      $('.loading').slideUp(800);
+      $('.main-content').fadeIn();
+    });
+  }
 });

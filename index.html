@@ -15,182 +15,187 @@
   <script src="./js/main.js"></script>
 </head>
 <body>
-  <header class="header">
-    <h1 class="logo">
-      <a href="#">Shu's portfolio</a>
-    </h1>
-  </header>
-  <div class="side">
-    <div class="side-button">
-      <div class="menu-button">
-        <i></i>
+  <div class="loading">
+    <img src="images/loading.gif" alt="" />
+  </div>
+  <div class="main-content">
+    <header class="header">
+      <h1 class="logo">
+        <a href="#">Shu's portfolio</a>
+      </h1>
+    </header>
+    <div class="side">
+      <div class="side-button">
+        <div class="menu-button">
+          <i></i>
+        </div>
+      </div>
+      <div class="sidebar">
+        <ul class="sidemenu">
+          <li class="side-item"><a href="#top">HOME</a></li>
+          <li class="side-item"><a href="#about">ABOUT ME</a></li>
+          <li class="side-item"><a href="#skills">SKILLS</a></li>
+          <li class="side-item"><a href="#works">WORKS</a></li>
+          <li class="side-item"><a href="#contact">CONTACT</a></li>
+          <li class="side-item"><a href="https://twitter.com/T_shu_Channel">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a href="https://github.com/sssttt-maker">
+            <i class="fab fa-github fa-lg"></i>
+          </a></li>
+        </ul>
       </div>
     </div>
-    <div class="sidebar">
-      <ul class="sidemenu">
-        <li class="side-item"><a href="#top">HOME</a></li>
-        <li class="side-item"><a href="#about">ABOUT ME</a></li>
-        <li class="side-item"><a href="#skills">SKILLS</a></li>
-        <li class="side-item"><a href="#works">WORKS</a></li>
-        <li class="side-item"><a href="#contact">CONTACT</a></li>
-        <li class="side-item"><a href="https://twitter.com/T_shu_Channel">
-          <i class="fab fa-twitter fa-lg"></i>
+    <div class="footer">
+      <div class="social-wrapper">
+        <a href="https://twitter.com/T_shu_Channel" class="social-btn">
+          <i class="fab fa-twitter fa-2x"></i>
         </a>
-        <a href="https://github.com/sssttt-maker">
-          <i class="fab fa-github fa-lg"></i>
-        </a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer">
-    <div class="social-wrapper">
-      <a href="https://twitter.com/T_shu_Channel" class="social-btn">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      <a href="https://github.com/sssttt-maker" class="social-btn">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-    </div>
-  </div>
-  <section id="top" class="top">
-    <div class="content">
-      <h1 class="site-title textillate">Shu</h1>
-      <p class="site-title-sub randomFadeIn">My portfolio</p>
-    </div>
-  </section>
-  <section id="about" class="about">
-    <h2 class="heading">ABOUT ME</h2>
-    <img src="./images/profile-image.jpg" alt="プロフィール画像" class="about-img elem" />
-    <div class="about-box">
-      <p class="about-text elem">
-        はじめまして。休学中大学生のShuです。<br />
-        大学ではIT系の勉強をしていて、将来はフリーランスのエンジニアになりたいと思っております。
-      </p>
-      <p class="about-text elem">
-        このサイトは、自分の制作物がほしくて１からすべて自分で作りました。<br />
-        バックエンド側は、Ruby on Railsを勉強しており、簡単なtwitterのクローンやブログアプリを制作しました。
-      </p>
-      <p class="about-text elem">
-        エンジニアの長期インターンをしており、gitを使用した開発に参加しております。
-      </p>
-    </div>
-  </section>
-  <section id="skills" class="skills">
-    <h2 class="heading">SKILLS</h2>
-    <div class="skill-wrapper">
-      <div class="skill-box elem">
-        <h3 class="skill-heading">言語</h3>
-        <table class="skill-table">
-          <tr class="skill-item">
-            <th class="skill-name">HTML</th>
-            <td class="rate rate5"></td>
-          </tr>
-          <tr class="skill-item">
-            <th class="skill-name">CSS</th>
-            <td class="rate rate5"></td>
-          </tr>
-          <tr class="skill-item">
-            <th class="skill-name">JavaScript</th>
-            <td class="rate rate3"></td>
-          </tr>
-          <tr class="skill-item">
-            <th class="skill-name">Ruby</th>
-            <td class="rate rate4"></td>
-          </tr>
-        </table>
-      </div>
-      <div class="skill-box elem">
-        <h3 class="skill-heading">FW・ライブラリ</h3>
-        <table class="skill-table">
-          <tr class="skill-item">
-            <th class="skill-name">Bootstrap</th>
-            <td class="rate rate3"></td>
-          </tr>
-          <tr class="skill-item">
-            <th class="skill-name">jQuery</th>
-            <td class="rate rate3"></td>
-          </tr>
-          <tr class="skill-item">
-            <th class="skill-name">Vue.js</th>
-            <td class="rate rate3"></td>
-          </tr>
-          <tr class="skill-item">
-            <th class="skill-name">Rails</th>
-            <td class="rate rate4"></td>
-          </tr>
-        </table>
-      </div>
-      <div class="skill-box elem">
-        <h3 class="skill-heading">その他</h3>
-        <table class="skill-table">
-          <tr class="skill-item">
-            <th class="skill-name">Postgresql</th>
-            <td class="rate rate3"></td>
-          </tr>
-          <tr class="skill-item">
-            <th class="skill-name">Git</th>
-            <td class="rate rate3"></td>
-          </tr>
-          <tr class="skill-item">
-            <th class="skill-name">slack</th>
-            <td class="rate rate3"></td>
-          </tr>
-        </table>
+        <a href="https://github.com/sssttt-maker" class="social-btn">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
       </div>
     </div>
-  </section>
-  <section id="works" class="works">
-    <h2 class="heading">WORKS</h2>
-    <div class="work-wrapper clearfix">
-      <div class="work-box elem">
-        <img src="images/shu-official.jpg" alt="制作物1" class="work-img" />
-        <div class="overlay">
-          <a href="https://shu-homepage.herokuapp.com/" class="expand">
-            <p class="work-text">shu-official</p>
-            <p class="work-description">
-              railsで一から作ったブログです。
-            </p>
-          </a>
+    <section id="top" class="top">
+      <div class="content">
+        <h1 class="site-title textillate">Shu</h1>
+        <p class="site-title-sub randomFadeIn">My portfolio</p>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <h2 class="heading">ABOUT ME</h2>
+      <img src="./images/profile-image.jpg" alt="プロフィール画像" class="about-img elem" />
+      <div class="about-box">
+        <p class="about-text elem">
+          はじめまして。休学中大学生のShuです。<br />
+          大学ではIT系の勉強をしていて、将来はフリーランスのエンジニアになりたいと思っております。
+        </p>
+        <p class="about-text elem">
+          このサイトは、自分の制作物がほしくて１からすべて自分で作りました。<br />
+          バックエンド側は、Ruby on Railsを勉強しており、簡単なtwitterのクローンやブログアプリを制作しました。
+        </p>
+        <p class="about-text elem">
+          エンジニアの長期インターンをしており、gitを使用した開発に参加しております。
+        </p>
+      </div>
+    </section>
+    <section id="skills" class="skills">
+      <h2 class="heading">SKILLS</h2>
+      <div class="skill-wrapper">
+        <div class="skill-box elem">
+          <h3 class="skill-heading">言語</h3>
+          <table class="skill-table">
+            <tr class="skill-item">
+              <th class="skill-name">HTML</th>
+              <td class="rate rate5"></td>
+            </tr>
+            <tr class="skill-item">
+              <th class="skill-name">CSS</th>
+              <td class="rate rate5"></td>
+            </tr>
+            <tr class="skill-item">
+              <th class="skill-name">JavaScript</th>
+              <td class="rate rate3"></td>
+            </tr>
+            <tr class="skill-item">
+              <th class="skill-name">Ruby</th>
+              <td class="rate rate4"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="skill-box elem">
+          <h3 class="skill-heading">FW・ライブラリ</h3>
+          <table class="skill-table">
+            <tr class="skill-item">
+              <th class="skill-name">Bootstrap</th>
+              <td class="rate rate3"></td>
+            </tr>
+            <tr class="skill-item">
+              <th class="skill-name">jQuery</th>
+              <td class="rate rate3"></td>
+            </tr>
+            <tr class="skill-item">
+              <th class="skill-name">Vue.js</th>
+              <td class="rate rate3"></td>
+            </tr>
+            <tr class="skill-item">
+              <th class="skill-name">Rails</th>
+              <td class="rate rate4"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="skill-box elem">
+          <h3 class="skill-heading">その他</h3>
+          <table class="skill-table">
+            <tr class="skill-item">
+              <th class="skill-name">Postgresql</th>
+              <td class="rate rate3"></td>
+            </tr>
+            <tr class="skill-item">
+              <th class="skill-name">Git</th>
+              <td class="rate rate3"></td>
+            </tr>
+            <tr class="skill-item">
+              <th class="skill-name">slack</th>
+              <td class="rate rate3"></td>
+            </tr>
+          </table>
         </div>
       </div>
-      <div class="work-box elem">
-        <img src="images/picup.jpg" alt="制作物2" class="work-img" />
-        <div class="overlay">
-          <a href="https://mypicup.herokuapp.com/" class="expand">
-            <p class="work-text">picup</p>
-            <p class="work-description">
-              railsでチュートリアルで作った写真共有アプリです。
-            </p>
-          </a>
+    </section>
+    <section id="works" class="works">
+      <h2 class="heading">WORKS</h2>
+      <div class="work-wrapper clearfix">
+        <div class="work-box elem">
+          <img src="images/shu-official.jpg" alt="制作物1" class="work-img" />
+          <div class="overlay">
+            <a href="https://shu-homepage.herokuapp.com/" class="expand">
+              <p class="work-text">shu-official</p>
+              <p class="work-description">
+                railsで一から作ったブログです。
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="work-box elem">
+          <img src="images/picup.jpg" alt="制作物2" class="work-img" />
+          <div class="overlay">
+            <a href="https://mypicup.herokuapp.com/" class="expand">
+              <p class="work-text">picup</p>
+              <p class="work-description">
+                railsでチュートリアルで作った写真共有アプリです。
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="work-box elem">
+          <img src="images/portfolio.jpg" alt="制作物3" class="work-img" />
+          <div class="overlay">
+            <a href="#" class="expand">
+              <p class="work-text">portfolio</p>
+              <p class="work-description">
+                このサイトです。
+              </p>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="work-box elem">
-        <img src="images/portfolio.jpg" alt="制作物3" class="work-img" />
-        <div class="overlay">
-          <a href="#" class="expand">
-            <p class="work-text">portfolio</p>
-            <p class="work-description">
-              このサイトです。
-            </p>
-          </a>
-        </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2 class="heading">CONTACT</h2>
+      <div class="contact-wrapper">
+        <a href="mailto:shu.programming1@gmail.com" class="contact-mail elem">
+          mail
+        </a>
+        <p>OR</p>
+        <a href="https://twitter.com/T_shu_Channel" class="contact-link elem">
+          Twitter
+        </a>
       </div>
+    </section>
+    <div class="under">
+      <p class="under-text">© shu's portfolio 2020</p>
     </div>
-  </section>
-  <section id="contact" class="contact">
-    <h2 class="heading">CONTACT</h2>
-    <div class="contact-wrapper">
-      <a href="mailto:shu.programming1@gmail.com" class="contact-mail elem">
-        mail
-      </a>
-      <p>OR</p>
-      <a href="https://twitter.com/T_shu_Channel" class="contact-link elem">
-        Twitter
-      </a>
-    </div>
-  </section>
-  <div class="under">
-    <p class="under-text">© shu's portfolio 2020</p>
   </div>
 </body>
 </html>

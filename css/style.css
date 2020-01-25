@@ -45,6 +45,10 @@ section {
   clear: both;
 }
 
+.main-content {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -451,4 +455,17 @@ a.expand {
     -webkit-ransform: translateY(0);
     opacity: 1;
   }
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
